@@ -8,15 +8,18 @@
 </head>
 <body>
     <nav>
-        <a href="index.html"><div id="logo">🏝️ T&#183;A&#183;N&#183;I&#183;T&#183;I</div></a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="accommodations.html">Accommodations</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="transportation.html">Transportation</a></li>
-        </ul>
+        <div class="navbar-container">
+            <a href="index.html"><div id="logo">🏝️ T&#183;A&#183;N&#183;I&#183;T&#183;I</div></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+            </ul>
 
-        <a href="booking.html"><button class="cta-nav">Plan Your Trip</button></a>
+            <a href="booking.html"><button class="cta-nav">Plan Your Trip</button></a>
+        </div>
+        <div class="hamburger">&#9776;</div>
     </nav>
 
     <section class="hero booking-hero">
@@ -149,6 +152,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navBarContainer = document.querySelector('.navbar-container');
+
+        hamburger.addEventListener('click', () => {
+            navBarContainer.classList.toggle('active');
+        });
+    </script>
 </body>
 </body>
 </html>

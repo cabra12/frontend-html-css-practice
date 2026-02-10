@@ -8,14 +8,17 @@
 </head>
 <body>
     <nav>
-        <a href="index.html"><div id="logo">🏝️ T&#183;A&#183;N&#183;I&#183;T&#183;I</div></a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="accommodations.html">Accommodations</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="transportation.html">Transportation</a></li>
-        </ul>
-        <a href="booking.html"><button class="cta-nav">Plan Your Trip</button></a>
+        <div class="navbar-container">
+            <a href="index.html"><div id="logo">🏝️ T&#183;A&#183;N&#183;I&#183;T&#183;I</div></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+            </ul>
+            <a href="booking.html"><button class="cta-nav">Plan Your Trip</button></a>
+        </div>
+        <div class="hamburger">&#9776;</div>
     </nav>
 
     <section class="hero trans-hero">
@@ -49,7 +52,7 @@
             <img src="images/transport-shuttle.jpg" alt="two shuttle cars driving down a road with white buildings around them">
             <div class="flex-accommo">
                 <h3 class="card-heading">Hotel Shuttles</h3>
-                <p class="subtext">Hotels will provide you with information about shuttles during your stay</p>
+                <p class="subtext">Hotels will provide you with information about shuttles during your stay.</p>
                 <button class="page-button">Learn More &nearr;</button>
                 <p class="disclaimer">&#9432; Link to third-party booking site</p>
             </div>
@@ -59,7 +62,7 @@
             <img src="images/bus-transport.jpg" alt="people on red and yellow bus smiling and waving from inside the bus">
             <div class="flex-accommo">
                 <h3 class="card-heading">Public Transportation</h3>
-                <p class="subtext">Find schedules, fare information, and routes for all island bus services by using the button below</p>
+                <p class="subtext">Find schedules, fare information, and routes for all island bus services by using the button below. Public buses run from 5 A.M. to 11 P.M. daily in Taniti City.</p>
                 <button class="page-button">Learn More &nearr;</button>
             </div>
         </div>
@@ -107,5 +110,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navBarContainer = document.querySelector('.navbar-container');
+
+        hamburger.addEventListener('click', () => {
+            navBarContainer.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
